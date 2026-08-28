@@ -38,6 +38,7 @@ export const translations = {
       name: 'Nama Anda',
       service: 'Jenis Layanan',
       submit: 'Hubungi via WhatsApp',
+      whatsappMessage: 'Halo Kalingga Bangkit, saya {name} ingin konsultasi layanan {service}',
     },
     footer: {
       address: 'Alamat',
@@ -84,6 +85,7 @@ export const translations = {
       name: 'Your Name',
       service: 'Service Type',
       submit: 'Contact via WhatsApp',
+      whatsappMessage: 'Hello Kalingga Bangkit, I am {name} and would like to consult about {service}',
     },
     footer: {
       address: 'Address',
@@ -96,9 +98,11 @@ export const translations = {
 
 export function t(language: 'id' | 'en', key: string): string {
   const keys = key.split('.');
-  let value: any = translations[language];
+  let value: Record<string, any> | string = translations[language];
   for (const k of keys) {
-    value = value?.[k];
+    if (typeof value === 'object' && value !== null) {
+      value = value[k];
+    }
   }
-  return value || key;
+  return typeof value === 'string' ? value : key;
 }
