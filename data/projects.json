@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "slug": "kantor-jakarta-2024",
+    "title": "Renovasi Kantor Jakarta",
+    "category": "commercial",
+    "year": 2024,
+    "location": "Jakarta Pusat",
+    "description": "Proyek renovasi kantor modern dengan konsep open space dan area meeting yang fleksibel.",
+    "process": ["Perencanaan", "Desain", "Konstruksi", "Serah Terima"],
+    "images": {
+      "before": "/images/portfolio/kantor-before.jpg",
+      "after": "/images/portfolio/kantor-after.jpg",
+      "gallery": [
+        "/images/portfolio/kantor-1.jpg",
+        "/images/portfolio/kantor-2.jpg"
+      ]
+    },
+    "testimonial": {
+      "client": "PT. Contoh Perusahaan",
+      "role": "Direktur",
+      "text": "Hasil renovasi melebihi ekspektasi kami. Tim profesional dan tepat waktu."
+    }
+  }
+]

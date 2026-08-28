@@ -1,0 +1,31 @@
+{
+  "name": "Kalingga Bangkit",
+  "tagline": "Desain Arsitektur & Konstruksi Berkualitas",
+  "description": "Kami adalah firma arsitektur berpengalaman dalam desain, konsultasi, renovasi, dan pembangunan bangunan residensial dan komersial.",
+  "vision": "Menjadi firma arsitektur terdepan yang menghadirkan desain inovatif dan berkelanjutan.",
+  "mission": [
+    "Memberikan solusi desain yang sesuai kebutuhan klien",
+    "Menjamin kualitas konstruksi terbaik",
+    "Memberikan layanan konsultasi profesional"
+  ],
+  "contact": {
+    "address": "Jl. Contoh No. 123, Jakarta Pusat",
+    "phone": "+62 21 1234567",
+    "email": "info@kalingga-bangkit.com",
+    "whatsapp": "62812345678"
+  },
+  "team": [
+    {
+      "name": "Nama Arsitek 1",
+      "role": "Arsitek Kepala",
+      "photo": "/images/team/architect-1.jpg",
+      "bio": "Berpengalaman 15 tahun dalam desain arsitektur"
+    },
+    {
+      "name": "Nama Arsitek 2",
+      "role": "Arsitek Senior",
+      "photo": "/images/team/architect-2.jpg",
+      "bio": "Spesialis desain komersial dan renovasi"
+    }
+  ]
+}
