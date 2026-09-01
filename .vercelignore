@@ -1,0 +1,5 @@
+# .vercelignore
+.git
+.gitignore
+README.md
+docs/
