@@ -72,7 +72,7 @@ export default function PortfolioDetailPage({
                 <div className="bg-blue-50 p-8 rounded-lg">
                   <h2 className="text-2xl font-bold mb-4">Testimonial</h2>
                   <p className="text-gray-700 italic mb-4">
-                    "{project.testimonial.text}"
+                    &ldquo;{project.testimonial.text}&rdquo;
                   </p>
                   <p className="font-bold">{project.testimonial.client}</p>
                   <p className="text-gray-600">{project.testimonial.role}</p>
