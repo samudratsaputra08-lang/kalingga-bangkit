@@ -38,7 +38,7 @@ export default function AboutPage() {
               <ul className="space-y-3">
                 {company.mission.map((item, index) => (
                   <li key={index} className="flex gap-3">
-                    <span className="text-blue-600 font-bold">?</span>
+                    <span className="text-blue-600 font-bold">✓</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
