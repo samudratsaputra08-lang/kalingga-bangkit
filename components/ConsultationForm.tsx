@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { generateWhatsAppLink } from '@/lib/utils';
 import companyData from '@/data/company.json';
 import { translations } from '@/lib/i18n';
-import { Company, Language } from '@/lib/types';
+import { Company } from '@/lib/types';
 
 interface ConsultationFormProps {
   service?: string;
@@ -17,7 +17,7 @@ export default function ConsultationForm({
   const [name, setName] = useState('');
   const [service, setService] = useState(defaultService || 'architectural-design');
   const company = companyData as Company;
-  const lang: Language = 'id';
+  const lang: 'id' | 'en' = 'id';
   const t = translations[lang];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -31,9 +31,7 @@ export default function ConsultationForm({
     const whatsappLink = generateWhatsAppLink(
       company.contact.whatsapp,
       name,
-      serviceLabel,
-      lang,
-      t.contact.whatsappMessage
+      serviceLabel
     );
     window.open(whatsappLink, '_blank');
   };
@@ -82,7 +80,7 @@ export default function ConsultationForm({
 
       <button
         type="submit"
-        className="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        className="w-full btn-primary bg-blue-600 text-white hover:bg-blue-700"
       >
         {t.contact.submit}
       </button>

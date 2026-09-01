@@ -1,5 +1,5 @@
 // app/contact/page.tsx
-import { Company, Language } from '@/lib/types';
+import { Company } from '@/lib/types';
 import companyData from '@/data/company.json';
 import ConsultationForm from '@/components/ConsultationForm';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -7,12 +7,12 @@ import { translations } from '@/lib/i18n';
 
 export default function ContactPage() {
   const company = companyData as Company;
-  const lang: Language = 'id';
+  const lang: 'id' | 'en' = 'id';
   const t = translations[lang];
 
   return (
     <div className="py-16">
-      <div className="container-app mx-auto px-4">
+      <div className="container-app">
         <AnimatedSection>
           <h1 className="text-5xl font-bold text-center mb-12">
             {t.contact.title}
@@ -51,9 +51,8 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold mb-2">WhatsApp</h2>
                 <a
                   href={`https://wa.me/${company.contact.whatsapp}`}
-                  className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
+                  className="inline-block btn-primary bg-green-600 text-white hover:bg-green-700"
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Chat via WhatsApp
                 </a>

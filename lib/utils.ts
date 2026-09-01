@@ -8,13 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 export function generateWhatsAppLink(
   phoneNumber: string,
   name: string,
-  service: string,
-  language: 'id' | 'en',
-  messageTemplate: string
+  service: string
 ): string {
-  const message = messageTemplate
-    .replace('{name}', name)
-    .replace('{service}', service);
+  const message = `Halo, saya ${name}. Saya tertarik dengan layanan ${service}.`;
   const encoded = encodeURIComponent(message);
   return `https://wa.me/${phoneNumber}?text=${encoded}`;
 }
