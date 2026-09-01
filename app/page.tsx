@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import TeamSection from '@/components/TeamSection';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -58,11 +59,13 @@ export default function Home() {
               <AnimatedSection key={project.id} delay={index * 0.1}>
                 <Link href={`/portfolio/${project.slug}`}>
                   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
-                    <div className="relative h-48 w-full bg-gray-200">
-                      {/* Image placeholder */}
-                      <div className="w-full h-full flex items-center justify-center text-gray-400">
-                        {project.title}
-                      </div>
+                    <div className="relative h-48 w-full">
+                      <Image
+                        src={project.images.after}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <div className="p-4">
                       <h3 className="text-lg font-bold">{project.title}</h3>
